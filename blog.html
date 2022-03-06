@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdelaR</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/manzana.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4562899e69.js" crossorigin="anonymous"></script>
+<body>
+    <section class="sub_header">
+        <nav>
+            <a href="index.html"><img src="imagenes/Logo-Udelar1.png"></a>
+            <div class="nav__links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="nosotros.html">ABOUT</a></li>
+                        <li><a href="cursos.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contacto.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Certificados y programas online en 2022</h1>
+
+    </section>
+
+    <!--BLOG-->
+
+    <section class="blog_content">
+        <div class="row">
+            <div class="blog_left">
+                <img src="imagenes/certificate.jpg" alt="Imagenes certificado">
+                <h2>Certificados y programas online en 2022</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem hic incidunt. Corrupti modi molestiae rem necessitatibus, nulla iure assumenda soluta, inventore neque odit, repellendus harum numquam possimus! Quo, excepturi.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, reprehenderit modi dolor cum vero assumenda quia nam blanditiis maxime illo ipsam placeat, accusamus dignissimos magnam voluptates hic autem fugit delectus.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt facere veniam nihil ut ex, perferendis aspernatur facilis rem id, ducimus alias quod nobis autem necessitatibus. Ipsa alias doloribus atque eius.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam labore ipsum provident blanditiis ullam inventore.</p>
+
+                <div class="comment_box">
+                    <h3>Deja un comentario</h3>
+                    <form class="comment_form">
+                        <input type="text" placeholder="Nombre">
+                        <input type="email" placeholder="Email">
+                        <textarea rows="5" placeholder="Tu comentario"></textarea>
+                        <button type="submit" class="hero__btn red__btn">DEJAR COMENTARIO</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="blog_right">
+                <h3>Post categorias</h3>
+                <div>
+                    <span>Business Analytics</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Data Science</span>
+                    <span>28</span>
+                </div>
+                <div>
+                    <span>Machine Learning</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Computer Science</span>
+                    <span>34</span>
+                </div>
+                <div>
+                    <span>AutoCAD</span>
+                    <span>42</span>
+                </div>
+                <div>
+                    <span>Journalism</span>
+                    <span>22</span>
+                </div>
+                <div>
+                    <span>Commerce</span>
+                    <span>30</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <section class="footer">
+        <h4>Sobre nosotros</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores harum pariatur magnam tenetur, deserunt perspiciatis voluptate eveniet nisi eaque nemo <br> atque minus magni quidem porro sapiente unde fugit nihil sed.</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f" id="iconos__redes"></i>
+            <i class="fa-brands fa-twitter" id="iconos__redes"></i>
+            <i class="fa-brands fa-instagram" id="iconos__redes"></i>
+            <i class="fa-brands fa-linkedin-in" id="iconos__redes"></i>
+        </div>
+        <p>Hecho con <i class="fa fa-heart-o"></i> por Nicolás Carro</p>
+    </section>
+
+
+    <!--JS Toggle Menu-->
+<script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

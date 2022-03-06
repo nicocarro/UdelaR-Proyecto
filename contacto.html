@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdelaR</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/manzana.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4562899e69.js" crossorigin="anonymous"></script>
+<body>
+    <section class="sub_header">
+        <nav>
+            <a href="index.html"><img src="imagenes/Logo-Udelar1.png"></a>
+            <div class="nav__links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="nosotros.html">ABOUT</a></li>
+                        <li><a href="cursos.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contacto.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contactanos</h1>
+
+    </section>
+
+    <!--CONTACTANOS-->
+
+    <section class="location">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8991.64395563603!2d-56.17919348446975!3d-34.90196313895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81b323b46a09%3A0xe607527c4f35081e!2sUniversidad%20de%20la%20Rep%C3%BAblica%20Oriental%20del%20Uruguay%20-%20Oficinas%20Centrales!5e0!3m2!1ses-419!2suy!4v1646592758236!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </section>
+
+    <section class="contactanos">
+        <div class="row">
+            <div class="contact_col">
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>18 de Julio 1968</h5>
+                        <p>Montevideo, Uruguay</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>2400 9201</h5>
+                        <p>Lunes a Viernes, 10AM a 18PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>info@udelar.com</h5>
+                        <p>Envíanos tu consulta</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact_col">
+
+                <form action="" id="form">
+                    <input type="text" placeholder="Ingresa tu nombre" required name="name">
+                    <input type="email" placeholder="Ingresa tu Email" required name="email">
+                    <input type="text" placeholder="Ingresa tu asunto" required name="subject">
+                    <textarea rows="8" placeholder="Mensaje" required name="message"></textarea>
+                    <button type="submit" class="hero__btn red__btn" id="button">Enviar mensaje</button>
+                </form>
+
+                <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                <script type="text/javascript">
+                    emailjs.init('bXdzdYR4jGDyvTo5l')
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <section class="footer">
+        <h4>Sobre nosotros</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores harum pariatur magnam tenetur, deserunt perspiciatis voluptate eveniet nisi eaque nemo <br> atque minus magni quidem porro sapiente unde fugit nihil sed.</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f" id="iconos__redes"></i>
+            <i class="fa-brands fa-twitter" id="iconos__redes"></i>
+            <i class="fa-brands fa-instagram" id="iconos__redes"></i>
+            <i class="fa-brands fa-linkedin-in" id="iconos__redes"></i>
+        </div>
+        <p>Hecho con <i class="fa fa-heart-o"></i> por Nicolás Carro</p>
+    </section>
+
+
+    <!--JS Toggle Menu-->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+    <!--JS Enviar Mail-->
+<script>
+        const btn = document.getElementById('button');
+
+   document.getElementById('form')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Enviando...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_652pp0o';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+         btn.value = 'Enviar mensaje';
+         alert('Mensaje enviado correctamente!');
+        }, (err) => {
+         btn.value = 'Enviar mensaje';
+         alert(JSON.stringify(err));
+        });
+    });
+</script>
+
+</body>
+</html>

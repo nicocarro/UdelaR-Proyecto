@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UdelaR</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/manzana.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4562899e69.js" crossorigin="anonymous"></script>
+<body>
+    <section class="sub_header">
+        <nav>
+            <a href="index.html"><img src="imagenes/Logo-Udelar1.png"></a>
+            <div class="nav__links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="nosotros.html">ABOUT</a></li>
+                        <li><a href="cursos.html">COURSE</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="contacto.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Sobre nosotros</h1>
+
+    </section>
+
+    <!--NOSOTROS-->
+
+    <section class="nosotros">
+        <div class="row">
+            <div class="nosotros_col">
+                <h1>Universidad más grande del país</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione earum, inventore similique quod odio necessitatibus debitis quaerat quam est, in veritatis atque beatae hic officiis magnam dolorum, at architecto cum!</p>
+                <a href="" class="hero__btn red__btn">EXPLORAR</a>
+            </div>
+            <div class="nosotros_col">
+                <img src="imagenes/about.jpg" alt="Imagen nosotros">
+            </div>
+        </div>
+    </section>
+
+    <!--FOOTER-->
+
+    <section class="footer">
+        <h4>Sobre nosotros</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores harum pariatur magnam tenetur, deserunt perspiciatis voluptate eveniet nisi eaque nemo <br> atque minus magni quidem porro sapiente unde fugit nihil sed.</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f" id="iconos__redes"></i>
+            <i class="fa-brands fa-twitter" id="iconos__redes"></i>
+            <i class="fa-brands fa-instagram" id="iconos__redes"></i>
+            <i class="fa-brands fa-linkedin-in" id="iconos__redes"></i>
+        </div>
+        <p>Hecho con <i class="fa fa-heart-o"></i> por Nicolás Carro</p>
+    </section>
+
+
+    <!--JS Toggle Menu-->
+<script>
+    
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
